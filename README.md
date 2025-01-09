@@ -12,7 +12,7 @@
 
 ## Системные требования
 
-- Windows 7/8/10/11 (64-bit) или Linux (Ubuntu 18.04+, 64-bit)
+- Linux (Ubuntu 18.04+, 64-bit)
 - Свободное место на диске: 200 МБ
 - Разрешение экрана: минимум 800x600
 
@@ -22,10 +22,8 @@
 
 1. Перейдите на страницу [Releases](https://github.com/JB-SelfCompany/Naryad/releases)
 2. Скачайте версию для вашей операционной системы:
-   - Windows: `naryad.exe`
    - Linux: `naryad`
 3. Запустите скачанный файл:
-   - Windows: двойной клик по .exe файлу
    - Linux: 
      ```bash
      chmod +x naryad
@@ -60,34 +58,6 @@
 
 5. Сборка программы:
    ```bash
-   pyinstaller naryad.spec
-   ```
-
-#### Windows
-1. Установка необходимого ПО:
-   - Python 3.x с python.org
-   - Git с git-scm.com
-   - При установке Python отметьте "Add Python to PATH"
-
-2. Клонирование репозитория:
-   ```cmd
-   git clone https://github.com/JB-SelfCompany/Naryad.git
-   cd Naryad
-   ```
-
-3. Создание виртуального окружения:
-   ```cmd
-   python -m venv venv
-   venv\Scripts\activate
-   ```
-
-4. Установка Python-зависимостей:
-   ```cmd
-   pip install -r requirements.txt
-   ```
-
-5. Сборка программы:
-   ```cmd
    pyinstaller naryad.spec
    ```
 
