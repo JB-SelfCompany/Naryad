@@ -41,78 +41,15 @@
 #### Простая установка (для пользователей)
 1. Перейдите на страницу релизов программы
 2. Скачайте последнюю версию для вашей операционной системы:
-   - Для Windows: `naryad-windows.exe`
-   - Для Linux: `naryad-linux`
+   - Для Windows: `naryad.exe`
+   - Для Linux: `naryad`
 3. Запустите скачанный файл:
    - Windows: двойной клик по .exe файлу
    - Linux: 
      ```bash
-     chmod +x naryad-linux
-     ./naryad-linux
+     chmod +x naryad
+     ./naryad
      ```
-
-#### Сборка из исходного кода (для разработчиков)
-
-##### Ubuntu
-1. Установка зависимостей:
-   ```bash
-   sudo apt update
-   sudo apt install python3 python3-pip python3-venv git
-   ```
-
-2. Клонирование репозитория:
-   ```bash
-   git clone https://github.com/username/naryad.git
-   cd naryad
-   ```
-
-3. Создание виртуального окружения:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-
-4. Установка Python-зависимостей:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. Сборка программы:
-   ```bash
-   pyinstaller naryad.spec
-   ```
-
-6. Готовый файл будет находиться в папке `dist`
-
-##### Windows
-1. Установка необходимого ПО:
-   - Скачайте и установите Python 3.x с python.org
-   - Скачайте и установите Git с git-scm.com
-   - При установке Python отметьте "Add Python to PATH"
-
-2. Клонирование репозитория:
-   ```cmd
-   git clone https://github.com/username/naryad.git
-   cd naryad
-   ```
-
-3. Создание виртуального окружения:
-   ```cmd
-   python -m venv venv
-   venv\Scripts\activate
-   ```
-
-4. Установка Python-зависимостей:
-   ```cmd
-   pip install -r requirements.txt
-   ```
-
-5. Сборка программы:
-   ```cmd
-   pyinstaller naryad.spec
-   ```
-
-6. Готовый .exe файл будет находиться в папке `dist`
 
 ## Интерфейс программы
 

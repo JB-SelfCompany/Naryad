@@ -1,13 +1,29 @@
 # -*- mode: python ; coding: utf-8 -*-
+import sys
+from PyInstaller.utils.hooks import collect_data_files, collect_dynamic_libs
 
 block_cipher = None
+
+qt_data = collect_data_files('PyQt6')
+matplotlib_data = collect_data_files('matplotlib')
 
 a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[],
-    hiddenimports=['PyQt6.QtPrintSupport'],
+    datas=qt_data + matplotlib_data,
+    hiddenimports=[
+        'PyQt6.QtPrintSupport',
+        'PyQt6.QtCore',
+        'PyQt6.QtGui',
+        'PyQt6.QtWidgets',
+        'PyQt6.sip',
+        'numpy',
+        'pandas',
+        'matplotlib',
+        'sklearn',
+        'matplotlib.backends.backend_qt5agg'
+    ],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -17,6 +33,7 @@ a = Analysis(
     cipher=block_cipher,
     noarchive=False,
 )
+
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 
 exe = EXE(
@@ -25,15 +42,12 @@ exe = EXE(
     a.binaries,
     a.zipfiles,
     a.datas,
-    [],
     name='naryad',
     debug=False,
-    bootloader_ignore_signals=False,
     strip=False,
     upx=True,
-    upx_exclude=[],
+    console=True,
     runtime_tmpdir=None,
-    console=False,
     disable_windowed_traceback=False,
     target_arch=None,
     codesign_identity=None,

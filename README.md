@@ -20,16 +20,16 @@
 
 ### Простая установка (для пользователей)
 
-1. Перейдите на страницу [Releases](ссылка_на_релизы)
+1. Перейдите на страницу [Releases](https://github.com/JB-SelfCompany/Naryad/releases)
 2. Скачайте версию для вашей операционной системы:
-   - Windows: `naryad-windows.exe`
-   - Linux: `naryad-linux`
+   - Windows: `naryad.exe`
+   - Linux: `naryad`
 3. Запустите скачанный файл:
    - Windows: двойной клик по .exe файлу
    - Linux: 
      ```bash
-     chmod +x naryad-linux
-     ./naryad-linux
+     chmod +x naryad
+     ./naryad
      ```
 
 ### Сборка из исходного кода (для разработчиков)
@@ -43,8 +43,8 @@
 
 2. Клонирование репозитория:
    ```bash
-   git clone https://github.com/username/naryad.git
-   cd naryad
+   git clone https://github.com/JB-SelfCompany/Naryad.git
+   cd Naryad
    ```
 
 3. Создание виртуального окружения:
@@ -71,8 +71,8 @@
 
 2. Клонирование репозитория:
    ```cmd
-   git clone https://github.com/username/naryad.git
-   cd naryad
+   git clone https://github.com/JB-SelfCompany/Naryad.git
+   cd Naryad
    ```
 
 3. Создание виртуального окружения:
